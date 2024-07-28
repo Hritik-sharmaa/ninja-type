@@ -1,4 +1,5 @@
 # NinjaType - make your typing more faster and accurate!
+A website where you can practice your typing speed and get more faster and accurate in your typing skills.
 
 # 🎯About project
 - **Random Text Generation:** On initial load, a random text is selected from a predefined list for the user to type.
