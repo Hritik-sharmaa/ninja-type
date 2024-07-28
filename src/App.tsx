@@ -198,10 +198,13 @@ function App() {
   };
 
   const calculateWPM = () => {
-    if (!startTime || !endTime) return 0;
-    const takenTime = (endTime - startTime) / 60000;
-    const textLength = currentTexts.split(" ").length;
-    return parseFloat((textLength / takenTime).toFixed(2));
+    if (!startTime) return 0;
+    const currentTime = endTime ? endTime : Date.now();
+    const elapsedTimeInMinutes = (currentTime - startTime) / 60000;
+    const numberOfCharsTyped = input.length;
+    const wordsTyped = numberOfCharsTyped / 5;
+    const wpm = wordsTyped / elapsedTimeInMinutes;
+    return parseFloat(wpm.toFixed(2));
   };
 
   return (

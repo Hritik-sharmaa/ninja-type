@@ -10,7 +10,7 @@
 }
 
 .font-CourierNew {
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
 }
 
 .font-Verdana {
@@ -155,6 +155,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
+  gap: 20px;
 }
 
 .font-btn {
@@ -226,4 +227,66 @@ body {
 .game-end-wrapper button:hover {
   background-color: rgb(196, 92, 12);
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  body {
+    font-size: large;
+  }
+
+  .game-status {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .theme {
+    flex-direction: column;
+    top: 20px;
+    bottom: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .theme-btn,
+  .font-btn {
+    margin: 10px 0;
+  }
+
+  .replay-btn {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: medium;
+  }
+
+  .game-status {
+    gap: 10px;
+  }
+
+  .theme {
+    top: 10px;
+    gap: 5px;
+  }
+
+  .theme-btn,
+  .font-btn {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .replay-btn {
+    font-size: 14px;
+    padding: 6px 16px;
+  }
+
+  .game-end-wrapper p {
+    font-size: 16px;
+  }
+
+  .game-end-wrapper button {
+    padding: 10px 50px;
+    font-size: 14px;
+  }
 }
